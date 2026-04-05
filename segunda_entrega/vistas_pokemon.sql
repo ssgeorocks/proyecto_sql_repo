@@ -36,7 +36,7 @@ SELECT
     CONCAT(fn_probabilidad_avistamiento(p.nivel_evolucion, (SELECT t2.nombre 
              FROM pokemon_tipo pt2 
              JOIN tipo t2 ON pt2.tipo_id = t2.id 
-             WHERE pt2.pokemon_id = p.id -- <--- ¡AQUÍ ESTÁ EL TRUCO!
+             WHERE pt2.pokemon_id = p.id
              LIMIT 1)
 			 ), '%') AS Probabilidad_Avistamiento
 FROM pokemon p
